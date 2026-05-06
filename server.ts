@@ -49,7 +49,7 @@ async function startServer() {
         from: 'Portfolio Contact <onboarding@resend.dev>',
         to: 'chetanganta272@gmail.com', // Recipient email
         subject: `New Contact Form Submission from ${name}`,
-        reply_to: email,
+        replyTo: email,
         html: `
           <h1>New Contact Form Submission</h1>
           <p><strong>Name:</strong> ${name}</p>

@@ -4,7 +4,7 @@ import {
   ExternalLink, Code2, Terminal, Globe, Cpu, Quote, X, Sun, Moon 
 } from 'lucide-react';
 import { PROJECTS, SKILLS, BLOG_POSTS, TESTIMONIALS } from './data';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<'All' | 'Frontend' | 'Backend' | 'DevOps' | 'Tools'>('All');
@@ -15,7 +15,7 @@ export default function App() {
   const [isSent, setIsSent] = useState(false);
   const [errorStatus, setErrorStatus] = useState<string | null>(null);
 
-  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setErrorStatus(null);

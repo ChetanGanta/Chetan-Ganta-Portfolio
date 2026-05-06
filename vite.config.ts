@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
   return {
     // If you are deploying to https://<USERNAME>.github.io/<REPO>/, 
     // set base to '/<REPO>/'. For a custom domain, set to '/'.
-    base: env.VITE_BASE_PATH || '/Portfolio/',
+    base: env.VITE_BASE_PATH || '/Chetan-Ganta-Portfolio/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
